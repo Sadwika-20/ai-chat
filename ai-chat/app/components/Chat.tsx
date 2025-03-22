@@ -1,0 +1,2 @@
+"use client";
+import { useState } from 'react';  export default function Chat() {   const [messages, setMessages] = useState(["Hello! How can I help?"]);    return (     <div className="flex flex-col h-screen p-4 bg-gray-100">       <div className="flex-1 overflow-y-auto space-y-2">         {messages.map((msg, idx) => (           <div key={idx} className="p-2 bg-white rounded shadow">{msg}</div>         ))}       </div>        <input type="text" className="p-2 border rounded w-full" placeholder="Type a message..." />     </div>   ); }
